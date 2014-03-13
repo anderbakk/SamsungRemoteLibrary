@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamsungRemoteLibrary", "Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamsungRemoteLibrary.Interfaces", "SamsungRemoteLibrary.Interfaces\SamsungRemoteLibrary.Interfaces.csproj", "{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamsungRemoteLibrary.TvConnector", "SamsungRemoteLibrary.TvConnector\SamsungRemoteLibrary.TvConnector.csproj", "{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

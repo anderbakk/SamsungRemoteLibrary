@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}</ProjectGuid>
+    <ProjectGuid>{A29B28FA-F23E-4BD8-BA2B-F386F960C94F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SamsungRemoteLibrary.Interfaces</RootNamespace>
-    <AssemblyName>SamsungRemoteLibrary.Interfaces</AssemblyName>
+    <RootNamespace>SamsungRemoteLibrary.TvConnector</RootNamespace>
+    <AssemblyName>SamsungRemoteLibrary.TvConnector</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,11 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IButton.cs" />
-    <Compile Include="IConnectToTv.cs" />
-    <Compile Include="IRemoteControl.cs" />
-    <Compile Include="IRequestBuilder.cs" />
+    <Compile Include="SamsungTvConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamsungRemoteLibrary.Interfaces\SamsungRemoteLibrary.Interfaces.csproj">
+      <Project>{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}</Project>
+      <Name>SamsungRemoteLibrary.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

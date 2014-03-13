@@ -82,8 +82,8 @@
     <Compile Include="Buttons\Volume\Mute.cs" />
     <Compile Include="Buttons\Volume\VolumeDown.cs" />
     <Compile Include="Buttons\Volume\VolumeUp.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SamsungRemoteLibrary.Interfaces\SamsungRemoteLibrary.Interfaces.csproj">
