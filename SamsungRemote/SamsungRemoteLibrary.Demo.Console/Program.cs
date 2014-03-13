@@ -6,7 +6,7 @@ namespace SamsungRemoteLibrary.Demo.Console
 {
     public class Program
     {
-        class YourSettings : IRemoteControlSettings
+        class YourSettings : IRemoteControlIdentification, ITvSettings
         {
             // Change these properties 
             public string RemoteControlIp{get{return "192.168.1.14";}}
@@ -30,7 +30,7 @@ namespace SamsungRemoteLibrary.Demo.Console
 
             System.Console.WriteLine(yourSettings);
 
-            var remote = new RemoteControl(new SamsungTvConnection(yourSettings, new RequestBuilder()));
+            var remote = new RemoteControl(new SamsungTvConnection(yourSettings, new SamsungBytesBuilder(yourSettings)));
 
             var button = new One();
             remote.Push(button);

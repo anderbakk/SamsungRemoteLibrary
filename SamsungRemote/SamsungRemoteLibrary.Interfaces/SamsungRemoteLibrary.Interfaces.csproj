@@ -42,8 +42,8 @@
     <Compile Include="IButton.cs" />
     <Compile Include="IConnectToTv.cs" />
     <Compile Include="IRemoteControl.cs" />
-    <Compile Include="IRemoteControlSettings.cs" />
-    <Compile Include="IRequestBuilder.cs" />
+    <Compile Include="IRemoteControlIdentification.cs" />
+    <Compile Include="ICreateBytesForSamsung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

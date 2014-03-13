@@ -7,23 +7,20 @@ namespace SamsungRemoteLibrary.TvConnector
 {
     public class SamsungTvConnection : IConnectToTv
     {
-        private readonly IRemoteControlSettings _settings;
-        private readonly IRequestBuilder _requestBuilder;
+        private readonly ITvSettings _settings;
+        private readonly ICreateBytesForSamsung _createBytesForSamsung;
 
-        public SamsungTvConnection(IRemoteControlSettings settings, IRequestBuilder requestBuilder)
+        public SamsungTvConnection(ITvSettings settings, ICreateBytesForSamsung createBytesForSamsung)
         {
             _settings = settings;
-            _requestBuilder = requestBuilder;
+            _createBytesForSamsung = createBytesForSamsung;
         }
 
         public void Send(IButton button)
         {
-            var identifier = _requestBuilder.CreateIdentifier(_settings.RemoteControlMac, _settings.AppName,
-                _settings.RemoteControlIp);
-
-            var secondParameter = _requestBuilder.CreateSecondParameter();
-
-            var command = _requestBuilder.CreateCommand(button.Code);
+            var identifier = _createBytesForSamsung.CreateIdentifier();
+            var secondParameter = _createBytesForSamsung.CreateSecondParameter();
+            var command = _createBytesForSamsung.CreateCommand(button.Code);
 
             Send(_settings.TvIp, _settings.TvPortNumber,
                 new List<byte[]>
