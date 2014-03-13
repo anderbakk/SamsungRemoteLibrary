@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63E5901B-E034-44D0-A01D-605C9C5603E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SamsungRemoteLibrary</RootNamespace>
+    <AssemblyName>SamsungRemoteLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buttons\Channel\ChannelDown.cs" />
+    <Compile Include="Buttons\Channel\ChannelList.cs" />
+    <Compile Include="Buttons\Channel\ChannelUp.cs" />
+    <Compile Include="Buttons\Channel\Source.cs" />
+    <Compile Include="Buttons\Menu\Caption.cs" />
+    <Compile Include="Buttons\Menu\Guide.cs" />
+    <Compile Include="Buttons\Menu\Info.cs" />
+    <Compile Include="Buttons\Menu\Menu.cs" />
+    <Compile Include="Buttons\Menu\PictureSize.cs" />
+    <Compile Include="Buttons\Menu\SmartHub.cs" />
+    <Compile Include="Buttons\Menu\Tools.cs" />
+    <Compile Include="Buttons\Misc\Ad.cs" />
+    <Compile Include="Buttons\Misc\Mts.cs" />
+    <Compile Include="Buttons\Misc\PowerOff.cs" />
+    <Compile Include="Buttons\Misc\Rss.cs" />
+    <Compile Include="Buttons\Misc\WLink.cs" />
+    <Compile Include="Buttons\Navigation\Enter.cs" />
+    <Compile Include="Buttons\Navigation\Exit.cs" />
+    <Compile Include="Buttons\Navigation\NavigateDown.cs" />
+    <Compile Include="Buttons\Navigation\NavigateLeft.cs" />
+    <Compile Include="Buttons\Navigation\NavigateRight.cs" />
+    <Compile Include="Buttons\Navigation\NavigateUp.cs" />
+    <Compile Include="Buttons\Navigation\Return.cs" />
+    <Compile Include="Buttons\Number\Channel.cs" />
+    <Compile Include="Buttons\Number\Eight.cs" />
+    <Compile Include="Buttons\Number\Five.cs" />
+    <Compile Include="Buttons\Number\Four.cs" />
+    <Compile Include="Buttons\Number\Nine.cs" />
+    <Compile Include="Buttons\Number\One.cs" />
+    <Compile Include="Buttons\Number\Seven.cs" />
+    <Compile Include="Buttons\Number\Six.cs" />
+    <Compile Include="Buttons\Number\Three.cs" />
+    <Compile Include="Buttons\Number\Two.cs" />
+    <Compile Include="Buttons\Number\Zero.cs" />
+    <Compile Include="Buttons\Recording\Forward.cs" />
+    <Compile Include="Buttons\Recording\Pause.cs" />
+    <Compile Include="Buttons\Recording\Play.cs" />
+    <Compile Include="Buttons\Recording\Record.cs" />
+    <Compile Include="Buttons\Recording\Rewind.cs" />
+    <Compile Include="Buttons\Recording\Stop.cs" />
+    <Compile Include="Buttons\Volume\Mute.cs" />
+    <Compile Include="Buttons\Volume\VolumeDown.cs" />
+    <Compile Include="Buttons\Volume\VolumeUp.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamsungRemoteLibrary.Interfaces\SamsungRemoteLibrary.Interfaces.csproj">
+      <Project>{E0D89FA2-5638-4974-BB18-6AEDDE48DAA1}</Project>
+      <Name>SamsungRemoteLibrary.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
