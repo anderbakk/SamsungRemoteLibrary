@@ -1,6 +1,6 @@
 using SamsungRemoteLibrary.Interfaces;
 
-namespace SamsungRemoteLibrary.Button.Number
+namespace SamsungRemoteLibrary.Buttons.Number
 {
     public class Three : INumberButton, IChannelButton
     {

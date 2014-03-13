@@ -1,6 +1,6 @@
 ﻿using SamsungRemoteLibrary.Interfaces;
 
-namespace SamsungRemoteLibrary.Button.Channel
+namespace SamsungRemoteLibrary.Buttons.Channel
 {
     public class ChannelUp : IChannelButton
     {
