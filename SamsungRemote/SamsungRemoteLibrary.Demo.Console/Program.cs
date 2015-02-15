@@ -1,5 +1,4 @@
-﻿using SamsungRemoteLibrary.Buttons.Number;
-using SamsungRemoteLibrary.Interfaces;
+﻿using SamsungRemoteLibrary.Interfaces;
 using SamsungRemoteLibrary.TvConnector;
 
 namespace SamsungRemoteLibrary.Demo.Console
@@ -9,10 +8,10 @@ namespace SamsungRemoteLibrary.Demo.Console
         class YourSettings : IRemoteControlIdentification, ITvSettings
         {
             // Change these properties 
-            public string RemoteControlIp{get{return "192.168.1.14";}}
-            public string TvIp{get{return "192.168.1.185";}}
+            public string RemoteControlIp{get{return "192.168.1.35";}}
+            public string TvIp{get{return "192.168.1.184";}}
             public int TvPortNumber{get{return 55000;}}
-            public string RemoteControlMac{get{return "11-11-11-11-11-11";}}
+            public string RemoteControlMac{get{return "0C-89-10-CD-43-28";}}
             public string AppName{get{return "Anderbakk remote";}}
 
             public override string ToString()
@@ -32,10 +31,9 @@ namespace SamsungRemoteLibrary.Demo.Console
 
             var remote = new RemoteControl(new SamsungTvConnection(yourSettings, new SamsungBytesBuilder(yourSettings)));
 
-            var button = new One();
-            remote.Push(button);
+            remote.Push("KEY_VOLDOWN");
+            System.Console.WriteLine("Command sent to TV.");
 
-            System.Console.WriteLine("Command {0} sent to TV.", button.Code);
             System.Console.ReadLine();
         }
 

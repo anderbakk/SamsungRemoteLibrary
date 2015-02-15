@@ -15,6 +15,11 @@ namespace SamsungRemoteLibrary
         {
             _tvConnector.Send(button);
         }
+
+        public void Push(string button)
+        {
+            _tvConnector.Send(button);
+        }
     }
 
 }

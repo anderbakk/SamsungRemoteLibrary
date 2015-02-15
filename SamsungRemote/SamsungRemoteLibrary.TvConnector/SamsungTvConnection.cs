@@ -31,6 +31,21 @@ namespace SamsungRemoteLibrary.TvConnector
                 });
         }
 
+        public void Send(string button)
+        {
+            var identifier = _createBytesForSamsung.CreateIdentifier();
+            var secondParameter = _createBytesForSamsung.CreateSecondParameter();
+            var command = _createBytesForSamsung.CreateCommand(button);
+
+            Send(_settings.TvIp, _settings.TvPortNumber,
+                new List<byte[]>
+                {
+                    identifier,
+                    secondParameter,
+                    command
+                });
+        }
+
         private void Send(string ipAddress, int portNumber, IEnumerable<byte[]> messages)
         {
             var listOfByteArrays = messages as IList<byte[]> ?? messages.ToList();
